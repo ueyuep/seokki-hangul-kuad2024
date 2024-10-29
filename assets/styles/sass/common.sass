@@ -1,0 +1,94 @@
+@font-face
+  font-family: 'serif-a-custom'
+  font-weight: 400
+  src: url('/assets/fonts/SerifA-Custom-Regular.woff2') format('woff2')
+  src: url('/assets/fonts/SerifA-Custom-Regular.woff') format('woff')
+
+@mixin mobile
+  @media (max-width: 900px)
+    @content
+
+*
+  border: 0
+  margin: 0
+  padding: 0
+  font-size: 100%
+  // font-display: block
+  font-style: normal
+  word-break: keep-all
+  text-decoration: none
+  list-style: none
+  box-sizing: border-box
+  vertical-align: baseline
+  background-color: transparent
+
+img
+  display: block
+
+input:focus, textarea:focus
+  outline: none
+
+a, a:hover, a:visited
+  color: #000
+  cursor: pointer
+  user-select: none
+
+button
+  color: #000
+  cursor: pointer
+  user-select: none
+
+// CSS Browser Selector
+.win body
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-text-stroke: 0.2px
+
+
+// Layout
+#container
+  width: 100%
+
+#content
+  width: 100%
+  max-width: 1000px
+  padding: 40px
+  margin: 0 auto
+
+// Serif A
+#body-serifA
+  font-family: serif-a-custom, quinn-text, sandoll-myeongjoneo1, serif
+  font-weight: 400
+  line-height: 1.68
+
+.serifA
+  span
+    position: relative
+    line-height: 1
+  .serifA-숫자
+    font-variant-numeric: lining-nums
+    color: green
+  .serifA-한글
+    font-weight: 500
+    font-size: 94%
+    letter-spacing: 0.045em
+    bottom: 0.035em
+  .serifA-한글괄호낫표
+    letter-spacing: 0.02em
+  .serifA-마침표따옴표
+    margin-right: -0.12em
+  .serifA-낫표괄호
+    margin-right: -0.06em
+
+.serifA.colored
+  .serifA-한글
+    color: blue
+  .serifA-한글괄호낫표
+    color: pink
+  .serifA-숫자
+    color: orange
+  .serifA-마침표따옴표
+    color: red
+  .serifA-낫표괄호
+    margin-right: -0.06em
+    color: purple
