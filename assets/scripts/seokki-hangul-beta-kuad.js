@@ -95,14 +95,14 @@ function seokkiHangul_B() {
       return `<span class="대시">${match}</span>`;
     });
 
-    // 꺽쇠
-    innerText = innerText.replace(/([\‹\›\«\»](?=[^(]|$))/g, (match) => {
-      return `<span class="꺽쇠">${match}</span>`;
-    });
-
     // 꺽쇠괄호
     innerText = innerText.replace(/([\‹\›\«\»](?=[\(]))/g, (match) => {
       return `<span class="꺽쇠괄호">${match}</span>`;
+    });
+
+    // 꺽쇠
+    innerText = innerText.replace(/([\‹\›\«\»](?=[^(]|$))/g, (match) => {
+      return `<span class="꺽쇠">${match}</span>`;
     });
 
     // 낫표
@@ -150,9 +150,24 @@ function seokkiHangul_D() {
       return `<span class="숫자">${match}</span>`;
     });
 
+    // 마침표+따옴표
+    innerText = innerText.replace(/([.](?=[’”]))/g, (match) => {
+      return `<span class="마침표따옴표">${match}</span>`;
+    });
+
+    // 따옴표
+    innerText = innerText.replace(/([\‘\’\“\”])/g, (match) => {
+      return `<span class="따옴표">${match}</span>`;
+    });
+
     // 대시
     innerText = innerText.replace(/([\-\—])/g, (match) => {
       return `<span class="대시">${match}</span>`;
+    });
+
+    // 꺽쇠괄호
+    innerText = innerText.replace(/([\‹\›\«\»](?=[\(]))/g, (match) => {
+      return `<span class="꺽쇠괄호">${match}</span>`;
     });
 
     // 괄호
@@ -165,11 +180,6 @@ function seokkiHangul_D() {
       return `<span class="꺽쇠">${match}</span>`;
     });
 
-    // 꺽쇠괄호
-    innerText = innerText.replace(/([\‹\›\«\»](?=[\(]))/g, (match) => {
-      return `<span class="꺽쇠괄호">${match}</span>`;
-    });
-
     // 낫표
     innerText = innerText.replace(/([\「\」\『\』])/g, (match) => {
       return `<span class="낫표">${match}</span>`;
@@ -178,11 +188,6 @@ function seokkiHangul_D() {
     // 콜론
     innerText = innerText.replace(/([\:\;])/g, (match) => {
       return `<span class="콜론">${match}</span>`;
-    });
-
-    // 마침표+따옴표
-    innerText = innerText.replace(/([.](?=[’”]))/g, (match) => {
-      return `<span class="마침표따옴표">${match}</span>`;
     });
 
     textEl.innerHTML = innerText;

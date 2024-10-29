@@ -190,8 +190,7 @@ button {
   bottom: 0.12em;
 }
 .B .꺽쇠괄호 {
-  bottom: 0.12em;
-  margin-right: 0.05em;
+  margin-right: 0.02em;
 }
 .B .마침표따옴표 {
   margin-right: -0.2em;
@@ -236,13 +235,28 @@ button {
   letter-spacing: 0em;
   bottom: 0.075em;
 }
-.D .대시,
-.D .꺽쇠 {
+.D .따옴표 {
+  font-size: 102%;
   bottom: 0.07em;
+}
+.D .마침표따옴표 {
+  margin-right: -0.12em;
 }
 .D .괄호 {
   font-size: 112%;
   bottom: 0.06em;
+}
+.D .꺽쇠괄호 {
+  margin-right: 0.02em;
+  color: blue;
+}
+.D .대시,
+.D .콜론 {
+  bottom: 0.07em;
+}
+.D .꺽쇠 {
+  font-size: 112%;
+  bottom: 0.055em;
 }
 
 .D .낫표 {
