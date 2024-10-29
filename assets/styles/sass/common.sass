@@ -5,6 +5,12 @@
   src: url('/assets/fonts/SerifA-Custom-Regular.woff') format('woff')
 
 @font-face
+  font-family: 'sans-b-custom'
+  font-weight: 400
+  src: url('/assets/fonts/SansB-Custom-Regular.woff2') format('woff2')
+  src: url('/assets/fonts/SansB-Custom-Regular.woff') format('woff')
+
+@font-face
   font-family: 'sans-d-custom'
   font-weight: 500
   src: url('/assets/fonts/SansD-Custom-Regular.woff2') format('woff2')
@@ -74,7 +80,7 @@ button
 
 #content
   width: 100%
-  max-width: 980px
+  max-width: 880px
   padding: 80px 40px
   margin: 0 auto
   @include mobile
@@ -86,7 +92,7 @@ button
 // Typography
 
 .indent
-  text-indent: 10mm
+  text-indent: 20mm
 
 .colored
   .roman
@@ -125,12 +131,12 @@ button
   .한글
     font-weight: 500
     font-size: 94%
-    letter-spacing: 0.045em
+    letter-spacing: 0.03em
     bottom: 0.045em
   .한글괄호꺽쇠낫표
     font-weight: 500
     font-size: 94%
-    letter-spacing: 0.02emem
+    letter-spacing: -0.005em
     bottom: 0.045em
   .숫자
     font-variant-numeric: lining-nums
@@ -140,13 +146,13 @@ button
   .꺽쇠
     bottom: 0.09em
   .마침표따옴표
-    margin-right: -0.08em
+    letter-spacing: -0.08em
   .낫표괄호
-    margin-right: -0.06em
+    letter-spacing: -0.06em
 
 // B Sans
 #body-B
-  font-family: kranto-display, noto-sans-cjk-kr, sans-serif
+  font-family: sans-b-custom, kranto-display, noto-sans-cjk-kr, sans-serif
   font-weight: 400
   font-size: 22px
   word-spacing: 0.01em
@@ -164,23 +170,33 @@ button
   .한글,
   .한글괄호꺽쇠낫표
     font-size: 90%
-    letter-spacing: 0.025em
+    letter-spacing: 0.0015em
     bottom: 0.03em
+  .한글괄호꺽쇠낫표
+    letter-spacing: -0.0015em
   .숫자
     font-size: 96%
     letter-spacing: 0.01em
+  .마침표
+    margin-left: -0.04em
+  .마침표따옴표
+    margin-left: -0.04em
+    margin-right: -0.2em
+  .쉼표
+    margin-left: -0.03em
+    bottom: 0.04em
+  .따옴표
+    margin: 0 -0.008em
+    bottom: -0.018em
   .대시,
   .꺽쇠,
+  .꺽쇠괄호,
   .콜론
     bottom: 0.12em
   .꺽쇠괄호
-    margin-right: 0.02em
-  .마침표따옴표
-    margin-right: -0.2em
-
-.B
-  .낫표
-    color: #FFF
+    letter-spacing: 0.02em
+  .낫표괄호
+    letter-spacing: -0.03em
 
 // D Sans
 #body-D
@@ -198,42 +214,51 @@ button
     position: relative
     line-height: 1
   .roman
-    font-size: 108%
+    font-size: 106%
     letter-spacing: 0.02em
   .romanParenthesis
-    font-size: 108%
+    font-size: 106%
     letter-spacing: -0.03em
   .숫자
     font-size: 102%
-    bottom: 0.02em
+    bottom: 0.015em
   .한글
     font-weight: 400
     font-size: 88%
-    letter-spacing: 0.01em
-    bottom: 0.05em
+    letter-spacing: 0.015em
+    bottom: 0.035em
   .한글괄호꺽쇠낫표
     font-weight: 400
     font-size: 88%
     letter-spacing: 0em
-    bottom: 0.075em
-  .따옴표
-    font-size: 102%
-    bottom: 0.07em
+    bottom: 0.035em
+  .마침표
+    font-size: 108%
+    bottom: -0.03em
   .마침표따옴표
-    margin-right: -0.12em
+    font-size: 108%
+    letter-spacing: -0.14em
+    bottom: -0.03em
+  .쉼표
+    font-size: 108%
+    bottom: 0em
+  .따옴표
+    font-size: 108%
+    bottom: 0.02em
   .괄호
     font-size: 112%
-    bottom: 0.06em
+    bottom: 0.04em
+  .꺽쇠
+    font-size: 130%
+    margin: 0 -0.03em
+    bottom: -0.015em
   .꺽쇠괄호
-    margin-right: 0.02em
+    font-size: 130%
+    letter-spacing: 0.03em
+    margin: 0 -0.03em
+    bottom: 0.01em
   .대시
     bottom: 0.07em
   .콜론
     bottom: 0.08em
-  .꺽쇠
-    font-size: 112%
-    bottom: 0.055em
-
-.D
-  .낫표
-    color: #FFF
+    margin-left: 0.01em
