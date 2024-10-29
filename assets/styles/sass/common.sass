@@ -50,6 +50,13 @@ button
   -moz-osx-font-smoothing: grayscale
   -webkit-text-stroke: 0.2px
 
+// Hide Scrollbar
+*
+  -ms-overflow-style: none
+  scrollbar-width: none
+  &::-webkit-scrollbar
+    display: none
+
 // Layout
 #container
   width: 100%
@@ -64,7 +71,7 @@ button
 #body-A
   font-family: serif-a-custom, quinn-text, sandoll-myeongjoneo1, serif
   font-weight: 400
-  font-size: 18px
+  font-size: 22px
   line-height: 1.68
   // hanging-punctuation: first last
 

@@ -58,8 +58,6 @@ function seokkiHangul_serifA() {
       return `<span class="마침표따옴표">${match}</span>`;
     });
 
-
-
     textEl.innerHTML = innerText;
   }
 }
