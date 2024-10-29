@@ -22,6 +22,12 @@
   vertical-align: baseline
   background-color: transparent
 
+*
+  user-select: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+
 img
   display: block
 
@@ -44,7 +50,6 @@ button
   -moz-osx-font-smoothing: grayscale
   -webkit-text-stroke: 0.2px
 
-
 // Layout
 #container
   width: 100%
@@ -56,39 +61,56 @@ button
   margin: 0 auto
 
 // Serif A
-#body-serifA
+#body-A
   font-family: serif-a-custom, quinn-text, sandoll-myeongjoneo1, serif
   font-weight: 400
+  font-size: 18px
   line-height: 1.68
+  // hanging-punctuation: first last
 
-.serifA
+.indent
+  text-indent: 10mm
+
+.A
   span
     position: relative
     line-height: 1
-  .serifA-숫자
-    font-variant-numeric: lining-nums
-    color: green
-  .serifA-한글
+  .roman
+  .한글
     font-weight: 500
     font-size: 94%
     letter-spacing: 0.045em
-    bottom: 0.035em
-  .serifA-한글괄호낫표
-    letter-spacing: 0.02em
-  .serifA-마침표따옴표
-    margin-right: -0.12em
-  .serifA-낫표괄호
+    bottom: 0.045em
+  .한글괄호꺽쇠낫표
+    letter-spacing: 0.02emem
+  .숫자
+    font-variant-numeric: lining-nums
+  .콜론
+    bottom: 0.12em
+  .대시
+  .꺾쇠
+    bottom: 0.09em
+  .마침표따옴표
+    margin-right: -0.08em
+  .낫표괄호
     margin-right: -0.06em
 
-.serifA.colored
-  .serifA-한글
-    color: blue
-  .serifA-한글괄호낫표
-    color: pink
-  .serifA-숫자
-    color: orange
-  .serifA-마침표따옴표
-    color: red
-  .serifA-낫표괄호
-    margin-right: -0.06em
-    color: purple
+.colored
+  .A
+    .roman
+      color: #FF5729
+    .한글
+      color: #007327
+    .한글괄호꺽쇠낫표
+      color: #00DB4A
+    .숫자
+      color: #008DE7
+    .대시,
+    .콜론
+      color: #F5B400
+    .꺾쇠,
+    .낫표,
+    .마침표따옴표
+      color: #FF59E6
+    .낫표괄호
+      color: #FFA6E3
