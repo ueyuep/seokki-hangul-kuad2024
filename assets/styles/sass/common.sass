@@ -4,8 +4,12 @@
   src: url('/assets/fonts/SerifA-Custom-Regular.woff2') format('woff2')
   src: url('/assets/fonts/SerifA-Custom-Regular.woff') format('woff')
 
+@mixin tablet
+  @media (min-width: 821px) and (max-width: 1276px)
+    @content
+
 @mixin mobile
-  @media (max-width: 900px)
+  @media (max-width: 820px)
     @content
 
 *
@@ -60,23 +64,52 @@ button
 // Layout
 #container
   width: 100%
+  min-height: 180vh //temp
 
 #content
   width: 100%
-  max-width: 1000px
-  padding: 40px
+  max-width: 980px
+  padding: 80px 40px
   margin: 0 auto
+  @include mobile
+    padding: 80px 24px
 
-// Serif A
+.body
+  margin-bottom: 40px //temp
+
+// Typography
+
+.indent
+  text-indent: 10mm
+
+.colored
+  .roman
+    color: #FF5729
+  .한글
+    color: #007327
+  .한글괄호꺽쇠낫표
+    color: #00DB4A
+  .숫자
+    color: #008DE7
+  .대시,
+  .콜론
+    color: #F5B400
+  .꺽쇠,
+  .낫표,
+  .마침표따옴표
+    color: #FF59E6
+  .낫표괄호
+    color: #FFA6E3
+
+// A Serif
 #body-A
   font-family: serif-a-custom, quinn-text, sandoll-myeongjoneo1, serif
   font-weight: 400
   font-size: 22px
   line-height: 1.68
   // hanging-punctuation: first last
-
-.indent
-  text-indent: 10mm
+  @include mobile
+    font-size: 16px
 
 .A
   span
@@ -89,35 +122,98 @@ button
     letter-spacing: 0.045em
     bottom: 0.045em
   .한글괄호꺽쇠낫표
+    font-weight: 500
+    font-size: 94%
     letter-spacing: 0.02emem
+    bottom: 0.045em
   .숫자
     font-variant-numeric: lining-nums
   .콜론
     bottom: 0.12em
   .대시
-  .꺾쇠
+  .꺽쇠
     bottom: 0.09em
   .마침표따옴표
     margin-right: -0.08em
   .낫표괄호
     margin-right: -0.06em
 
-.colored
-  .A
-    .roman
-      color: #FF5729
-    .한글
-      color: #007327
-    .한글괄호꺽쇠낫표
-      color: #00DB4A
-    .숫자
-      color: #008DE7
-    .대시,
-    .콜론
-      color: #F5B400
-    .꺾쇠,
-    .낫표,
-    .마침표따옴표
-      color: #FF59E6
-    .낫표괄호
-      color: #FFA6E3
+// B Sans
+#body-B
+  font-family: kranto-display, noto-sans-cjk-kr, sans-serif
+  font-weight: 400
+  font-size: 22px
+  word-spacing: 0.01em
+  line-height: 1.68
+  // hanging-punctuation: first last
+  @include mobile
+    font-size: 16px
+
+.B
+  span
+    position: relative
+    line-height: 1
+  .roman
+    font-size: 96%
+  .한글,
+  .한글괄호꺽쇠낫표
+    font-size: 90%
+    letter-spacing: 0.025em
+    bottom: 0.03em
+  .숫자
+    font-size: 96%
+    letter-spacing: 0.01em
+  .대시,
+  .꺽쇠,
+  .콜론
+    bottom: 0.12em
+  .꺽쇠괄호
+    bottom: 0.12em
+    margin-right: 0.05em
+  .마침표따옴표
+    margin-right: -0.2em
+
+.B
+  .낫표
+    color: #FFF
+
+// B Sans
+#body-D
+  font-family: itc-american-typewriter-cond, neutronic-hangeul, sans-serif
+  font-weight: 400
+  font-size: 22px
+  word-spacing: 0.015em
+  line-height: 1.68
+  // hanging-punctuation: first last
+  @include mobile
+    font-size: 16px
+
+.D
+  span
+    position: relative
+    line-height: 1
+  .roman
+    font-size: 108%
+    letter-spacing: 0.02em
+  .숫자
+    font-size: 102%
+    bottom: 0.02em
+  .한글
+    font-size: 88%
+    letter-spacing: 0.01em
+    bottom: 0.05em
+  .한글괄호꺽쇠낫표
+    font-size: 88%
+    letter-spacing: 0em
+    bottom: 0.075em
+
+  .대시,
+  .꺽쇠
+    bottom: 0.07em
+  .괄호
+    font-size: 112%
+    bottom: 0.06em
+
+.D
+  .낫표
+    color: #FFF
