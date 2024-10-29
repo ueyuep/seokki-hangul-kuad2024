@@ -131,8 +131,13 @@ function seokkiHangul_D() {
     let innerText = textEl.innerText;
 
     // 로마자
-    innerText = innerText.replace(/([A-z]+)/g, (match) => {
+    innerText = innerText.replace(/[A-z]+(?=[^)]|$)/g, (match) => {
       return `<span class="roman">${match}</span>`;
+    });
+
+    // 로마자+괄호
+    innerText = innerText.replace(/([A-z](?=[\)]))/g, (match) => {
+      return `<span class="romanParenthesis">${match}</span>`;
     });
 
     // 한글
@@ -141,7 +146,7 @@ function seokkiHangul_D() {
     });
 
     // 한글+괄호꺽쇠낫표
-    innerText = innerText.replace(/([가-힣](?=[\)\‹\›\«\»\」\』]))/g, (match) => {
+    innerText = innerText.replace(/([가-힣](?=[\)\›\»\」\』]))/g, (match) => {
       return `<span class="한글괄호꺽쇠낫표">${match}</span>`;
     });
 
@@ -165,7 +170,7 @@ function seokkiHangul_D() {
       return `<span class="대시">${match}</span>`;
     });
 
-    // 꺽쇠괄호
+    // 꺽쇠+괄호
     innerText = innerText.replace(/([\‹\›\«\»](?=[\(]))/g, (match) => {
       return `<span class="꺽쇠괄호">${match}</span>`;
     });

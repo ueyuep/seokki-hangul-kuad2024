@@ -5,6 +5,12 @@
   src: url("/assets/fonts/SerifA-Custom-Regular.woff2") format("woff2");
   src: url("/assets/fonts/SerifA-Custom-Regular.woff") format("woff");
 }
+@font-face {
+  font-family: "sans-d-custom";
+  font-weight: 500;
+  src: url("/assets/fonts/SansD-Custom-Regular.woff2") format("woff2");
+  src: url("/assets/fonts/SansD-Custom-Regular.woff") format("woff");
+}
 * {
   border: 0;
   margin: 0;
@@ -201,8 +207,8 @@ button {
 }
 
 #body-D {
-  font-family: itc-american-typewriter-cond, neutronic-hangeul, sans-serif;
-  font-weight: 400;
+  font-family: sans-d-custom, itc-american-typewriter-cond, neutronic-hangeul, sans-serif;
+  font-weight: 500;
   font-size: 22px;
   word-spacing: 0.015em;
   line-height: 1.68;
@@ -221,16 +227,22 @@ button {
   font-size: 108%;
   letter-spacing: 0.02em;
 }
+.D .romanParenthesis {
+  font-size: 108%;
+  letter-spacing: -0.03em;
+}
 .D .숫자 {
   font-size: 102%;
   bottom: 0.02em;
 }
 .D .한글 {
+  font-weight: 400;
   font-size: 88%;
   letter-spacing: 0.01em;
   bottom: 0.05em;
 }
 .D .한글괄호꺽쇠낫표 {
+  font-weight: 400;
   font-size: 88%;
   letter-spacing: 0em;
   bottom: 0.075em;
@@ -248,11 +260,12 @@ button {
 }
 .D .꺽쇠괄호 {
   margin-right: 0.02em;
-  color: blue;
 }
-.D .대시,
-.D .콜론 {
+.D .대시 {
   bottom: 0.07em;
+}
+.D .콜론 {
+  bottom: 0.08em;
 }
 .D .꺽쇠 {
   font-size: 112%;

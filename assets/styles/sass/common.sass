@@ -4,6 +4,12 @@
   src: url('/assets/fonts/SerifA-Custom-Regular.woff2') format('woff2')
   src: url('/assets/fonts/SerifA-Custom-Regular.woff') format('woff')
 
+@font-face
+  font-family: 'sans-d-custom'
+  font-weight: 500
+  src: url('/assets/fonts/SansD-Custom-Regular.woff2') format('woff2')
+  src: url('/assets/fonts/SansD-Custom-Regular.woff') format('woff')
+
 @mixin tablet
   @media (min-width: 821px) and (max-width: 1276px)
     @content
@@ -176,10 +182,10 @@ button
   .낫표
     color: #FFF
 
-// B Sans
+// D Sans
 #body-D
-  font-family: itc-american-typewriter-cond, neutronic-hangeul, sans-serif
-  font-weight: 400
+  font-family: sans-d-custom, itc-american-typewriter-cond, neutronic-hangeul, sans-serif
+  font-weight: 500
   font-size: 22px
   word-spacing: 0.015em
   line-height: 1.68
@@ -194,14 +200,19 @@ button
   .roman
     font-size: 108%
     letter-spacing: 0.02em
+  .romanParenthesis
+    font-size: 108%
+    letter-spacing: -0.03em
   .숫자
     font-size: 102%
     bottom: 0.02em
   .한글
+    font-weight: 400
     font-size: 88%
     letter-spacing: 0.01em
     bottom: 0.05em
   .한글괄호꺽쇠낫표
+    font-weight: 400
     font-size: 88%
     letter-spacing: 0em
     bottom: 0.075em
@@ -215,10 +226,10 @@ button
     bottom: 0.06em
   .꺽쇠괄호
     margin-right: 0.02em
-    color: blue
-  .대시,
-  .콜론
+  .대시
     bottom: 0.07em
+  .콜론
+    bottom: 0.08em
   .꺽쇠
     font-size: 112%
     bottom: 0.055em
