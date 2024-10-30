@@ -81,26 +81,33 @@ button
 #content
   width: 100%
   max-width: 880px
-  padding: 80px 40px
+  padding: 120px 40px
   margin: 0 auto
   @include mobile
     padding: 80px 24px
 
 .body
-  margin-bottom: 40px //temp
+  margin-bottom: 60px //temp
+  @include mobile
+    margin-bottom: 40px //temp
 
 // Typography
 
 .indent
-  text-indent: 20mm
+  text-indent: 24mm
+  @include mobile
+    text-indent: 16mm
 
 .colored
   .roman
     color: #FF5729
+  .romanParenthesis,
+  .마침표따옴표
+    color: #D90000
   .한글
-    color: #007327
+    color: #006923
   .한글괄호꺽쇠낫표
-    color: #00DB4A
+    color: #00BF40
   .숫자
     color: #008DE7
   .대시,
@@ -108,10 +115,13 @@ button
     color: #F5B400
   .꺽쇠,
   .낫표,
-  .마침표따옴표
-    color: #FF59E6
+  .말줄임표
+    color: #FFB8E8
+  .꺽쇠괄호,
   .낫표괄호
-    color: #FFA6E3
+    color: #F565DF
+  .괄호
+    color: #00D8FF
 
 // A Serif
 #body-A
@@ -142,7 +152,10 @@ button
     font-variant-numeric: lining-nums
   .콜론
     bottom: 0.12em
+  .말줄임표
+    bottom: 0.28em
   .대시
+    bottom: 0.05em
   .꺽쇠
     bottom: 0.09em
   .마침표따옴표
@@ -188,6 +201,8 @@ button
   .따옴표
     margin: 0 -0.008em
     bottom: -0.018em
+  .말줄임표
+    bottom: 0.31em
   .대시,
   .꺽쇠,
   .꺽쇠괄호,
@@ -245,6 +260,9 @@ button
   .따옴표
     font-size: 108%
     bottom: 0.02em
+  .말줄임표
+    font-size: 108%
+    bottom: 0.282em
   .괄호
     font-size: 112%
     bottom: 0.04em
@@ -256,7 +274,7 @@ button
     font-size: 130%
     letter-spacing: 0.03em
     margin: 0 -0.03em
-    bottom: 0.01em
+    bottom: -0.015em
   .대시
     bottom: 0.07em
   .콜론

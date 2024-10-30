@@ -80,7 +80,7 @@ button {
 #content {
   width: 100%;
   max-width: 880px;
-  padding: 80px 40px;
+  padding: 120px 40px;
   margin: 0 auto;
 }
 @media (max-width: 820px) {
@@ -90,21 +90,35 @@ button {
 }
 
 .body {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+}
+@media (max-width: 820px) {
+  .body {
+    margin-bottom: 40px;
+  }
 }
 
 .indent {
-  text-indent: 20mm;
+  text-indent: 24mm;
+}
+@media (max-width: 820px) {
+  .indent {
+    text-indent: 16mm;
+  }
 }
 
 .colored .roman {
   color: #FF5729;
 }
+.colored .romanParenthesis,
+.colored .마침표따옴표 {
+  color: #D90000;
+}
 .colored .한글 {
-  color: #007327;
+  color: #006923;
 }
 .colored .한글괄호꺽쇠낫표 {
-  color: #00DB4A;
+  color: #00BF40;
 }
 .colored .숫자 {
   color: #008DE7;
@@ -115,11 +129,15 @@ button {
 }
 .colored .꺽쇠,
 .colored .낫표,
-.colored .마침표따옴표 {
-  color: #FF59E6;
+.colored .말줄임표 {
+  color: #FFB8E8;
 }
+.colored .꺽쇠괄호,
 .colored .낫표괄호 {
-  color: #FFA6E3;
+  color: #F565DF;
+}
+.colored .괄호 {
+  color: #00D8FF;
 }
 
 #body-A {
@@ -155,6 +173,12 @@ button {
 }
 .A .콜론 {
   bottom: 0.12em;
+}
+.A .말줄임표 {
+  bottom: 0.28em;
+}
+.A .대시 {
+  bottom: 0.05em;
 }
 .A .꺽쇠 {
   bottom: 0.09em;
@@ -213,6 +237,9 @@ button {
 .B .따옴표 {
   margin: 0 -0.008em;
   bottom: -0.018em;
+}
+.B .말줄임표 {
+  bottom: 0.31em;
 }
 .B .대시,
 .B .꺽쇠,
@@ -285,6 +312,10 @@ button {
   font-size: 108%;
   bottom: 0.02em;
 }
+.D .말줄임표 {
+  font-size: 108%;
+  bottom: 0.282em;
+}
 .D .괄호 {
   font-size: 112%;
   bottom: 0.04em;
@@ -298,7 +329,7 @@ button {
   font-size: 130%;
   letter-spacing: 0.03em;
   margin: 0 -0.03em;
-  bottom: 0.01em;
+  bottom: -0.015em;
 }
 .D .대시 {
   bottom: 0.07em;

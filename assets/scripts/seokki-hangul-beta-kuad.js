@@ -30,8 +30,13 @@ function seokkiHangul_A() {
       return `<span class="숫자">${match}</span>`;
     });
 
+    // 말줄임표
+    innerText = innerText.replace(/[\…]/g, (match) => {
+      return `<span class="말줄임표">${match}</span>`;
+    });
+
     // 대시
-    innerText = innerText.replace(/(\—)/g, (match) => {
+    innerText = innerText.replace(/([\-\—])/g, (match) => {
       return `<span class="대시">${match}</span>`;
     });
 
@@ -108,6 +113,11 @@ function seokkiHangul_B() {
     // 따옴표
     innerText = innerText.replace(/([\‘\’\“\”])/g, (match) => {
       return `<span class="따옴표">${match}</span>`;
+    });
+
+    // 말줄임표
+    innerText = innerText.replace(/[\…]/g, (match) => {
+      return `<span class="말줄임표">${match}</span>`;
     });
 
     // 대시
@@ -193,6 +203,11 @@ function seokkiHangul_D() {
     // 따옴표
     innerText = innerText.replace(/([\‘\’\“\”])/g, (match) => {
       return `<span class="따옴표">${match}</span>`;
+    });
+
+    // 말줄임표
+    innerText = innerText.replace(/[\…]/g, (match) => {
+      return `<span class="말줄임표">${match}</span>`;
     });
 
     // 대시
