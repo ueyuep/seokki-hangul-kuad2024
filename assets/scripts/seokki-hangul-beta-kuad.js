@@ -6,17 +6,17 @@ seokkiHangul_D();
 
 function seokkiHangul_A() {
   const patterns = [
-    { name: 'roman', grep: /([A-z]+)/g },
-    { name: '한글', grep: /[가-힣]+(?=[^)‹›«»」』]|$)/g },
-    { name: '한글괄호꺽쇠낫표', grep: /([가-힣](?=[\)\‹\›\«\»\」\』]))/g },
-    { name: '숫자', grep: /(\d+)/g },
-    { name: '말줄임표', grep: /[\…]/g },
-    { name: '대시', grep: /([\-\—])/g },
-    { name: '꺽쇠', grep: /([\‹\›\«\»])/g },
-    { name: '낫표', grep: /([\「\」\『\』](?=[^(]|$))/g },
-    { name: '낫표괄호', grep: /([\」\』](?=[\(]))/g },
-    { name: '콜론', grep: /([\:\;])/g },
-    { name: '마침표따옴표', grep: /([.](?=[’”]))/g },
+    { name: 'roman', grep: /[A-z]+/g },
+    { name: 'dash', grep: /[-—]/g },
+    { name: '한글', grep: /[가-힣]+(?=[^)›»」』]|$)/g },
+    { name: '한글-괄호꺽쇠낫표', grep: /[가-힣](?=[)›»」』])/g },
+    { name: '숫자', grep: /\d+/g },
+    { name: '말줄임표', grep: /[…]/g },
+    { name: '꺽쇠', grep: /[‹›«»](?=[^(]|$)/g },
+    { name: '낫표', grep: /[「」『』]/g },
+    { name: '낫표-괄호', grep: /[「」『』](?=[(])/g },
+    { name: '콜론', grep: /([:;])/g },
+    { name: '마침표-따옴표', grep: /[.](?=[’”])/g },
   ];
 
   let textEls = document.getElementsByClassName('A');
@@ -36,21 +36,21 @@ function seokkiHangul_A() {
 
 function seokkiHangul_B() {
   const patterns = [
-    { name: 'roman', grep: /([A-z]+)/g },
-    { name: '한글', grep: /[가-힣]+(?=[^)‹›«»」』]|$)/g },
-    { name: '한글괄호꺽쇠낫표', grep: /([가-힣](?=[\)\‹\›\«\»\」\』]))/g },
-    { name: '숫자', grep: /(\d+)/g },
-    { name: '마침표', grep: /([.])(?=[^’”]|$)/g },
-    { name: '마침표따옴표', grep: /([.](?=[’”]))/g },
-    { name: '쉼표', grep: /([,])/g },
-    { name: '따옴표', grep: /([\‘\’\“\”])/g },
-    { name: '말줄임표', grep: /[\…]/g },
-    { name: '대시', grep: /([\-\—])/g },
-    { name: '꺽쇠', grep: /([\‹\›\«\»](?=[^(]|$))/g },
-    { name: '꺽쇠괄호', grep: /([\›\»](?=[\(]))/g },
-    { name: '낫표', grep: /([\「\」\『\』](?=[^(]|$))/g },
-    { name: '낫표괄호', grep: /([\「\」\『\』](?=[\(]))/g },
-    { name: '콜론', grep: /([\:\;])/g },
+    { name: 'roman', grep: /[A-z]+/g },
+    { name: 'dash', grep: /[-—]/g },
+    { name: '한글', grep: /[가-힣]+(?=[^)›»」』]|$)/g },
+    { name: '한글-괄호꺽쇠낫표', grep: /[가-힣](?=[)›»」』])/g },
+    { name: '숫자', grep: /\d+/g },
+    { name: '마침표', grep: /[.](?=[^’”]|$)/g },
+    { name: '마침표-따옴표', grep: /[.](?=[’”])/g },
+    { name: '쉼표', grep: /[,]/g },
+    { name: '따옴표', grep: /[‘’“”]/g },
+    { name: '말줄임표', grep: /[…]/g },
+    { name: '꺽쇠', grep: /[‹›«»](?=[^(]|$)/g },
+    { name: '꺽쇠-괄호', grep: /[›»](?=[(])/g },
+    { name: '낫표', grep: /[「」『』]/g },
+    { name: '낫표-괄호', grep: /[「」『』](?=[(])/g },
+    { name: '콜론', grep: /[:;]/g },
   ];
 
   let textEls = document.getElementsByClassName('B');
@@ -71,21 +71,21 @@ function seokkiHangul_B() {
 function seokkiHangul_D() {
   const patterns = [
     { name: 'roman', grep: /[A-z]+(?=[^)]|$)/g },
-    { name: 'romanParenthesis', grep: /([A-z](?=[\)]))/g },
-    { name: '한글', grep: /[가-힣]+(?=[^)‹›«»」』]|$)/g },
-    { name: '한글괄호꺽쇠낫표', grep: /([가-힣](?=[\)\›\»\」\』]))/g },
-    { name: '숫자', grep: /(\d+)/g },
+    { name: 'romanParenthesis', grep: /[A-z](?=[)])/g },
+    { name: 'dash', grep: /[-—]/g },
+    { name: '한글', grep: /[가-힣]+(?=[^)›»」』]|$)/g },
+    { name: '한글-괄호꺽쇠낫표', grep: /[가-힣](?=[)›»」』])/g },
+    { name: '숫자', grep: /\d+/g },
     { name: '마침표', grep: /[.]+(?=[^’”]|$)/g },
-    { name: '마침표따옴표', grep: /([.](?=[’”]))/g },
-    { name: '쉼표', grep: /([,])/g },
-    { name: '따옴표', grep: /([\‘\’\“\”])/g },
-    { name: '말줄임표', grep: /[\…]/g },
-    { name: '대시', grep: /([\-\—])/g },
-    { name: '꺽쇠', grep: /([\‹\›\«\»](?=[^(]|$))/g },
-    { name: '꺽쇠괄호', grep: /([\›\»](?=[\(]))/g },
-    { name: '괄호', grep: /([\(\)])/g },
-    { name: '낫표', grep: /([\「\」\『\』])/g },
-    { name: '콜론', grep: /([\:\;])/g },
+    { name: '마침표-따옴표', grep: /[.](?=[’”])/g },
+    { name: '쉼표', grep: /[,]/g },
+    { name: '따옴표', grep: /[‘’“”]/g },
+    { name: '말줄임표', grep: /[…]/g },
+    { name: '꺽쇠', grep: /[‹›«»](?=[^(]|$)/g },
+    { name: '꺽쇠-괄호', grep: /[›»](?=[(])/g },
+    { name: '괄호', grep: /[()]/g },
+    { name: '낫표', grep: /[「」『』]/g },
+    { name: '콜론', grep: /[:;]/g },
   ];
 
   let textEls = document.getElementsByClassName('D');
@@ -125,7 +125,7 @@ function seokkiHangul_D() {
 
 //     // 한글+괄호꺽쇠낫표
 //     innerText = innerText.replace(/([가-힣](?=[\)\‹\›\«\»\」\』]))/g, (match) => {
-//       return `<span class="한글괄호꺽쇠낫표">${match}</span>`;
+//       return `<span class="한글-괄호꺽쇠낫표">${match}</span>`;
 //     });
 
 //     // 숫자
@@ -138,9 +138,9 @@ function seokkiHangul_D() {
 //       return `<span class="말줄임표">${match}</span>`;
 //     });
 
-//     // 대시
+//     // dash
 //     innerText = innerText.replace(/([\-\—])/g, (match) => {
-//       return `<span class="대시">${match}</span>`;
+//       return `<span class="dash">${match}</span>`;
 //     });
 
 //     // 꺽쇠
@@ -155,7 +155,7 @@ function seokkiHangul_D() {
 
 //     // 낫표+괄호
 //     innerText = innerText.replace(/([\」\』](?=[\(]))/g, (match) => {
-//       return `<span class="낫표괄호">${match}</span>`;
+//       return `<span class="낫표-괄호">${match}</span>`;
 //     });
 
 //     // 콜론
@@ -165,7 +165,7 @@ function seokkiHangul_D() {
 
 //     // 마침표+따옴표
 //     innerText = innerText.replace(/([.](?=[’”]))/g, (match) => {
-//       return `<span class="마침표따옴표">${match}</span>`;
+//       return `<span class="마침표-따옴표">${match}</span>`;
 //     });
 
 //     textEl.innerHTML = innerText;
@@ -190,7 +190,7 @@ function seokkiHangul_D() {
 
 //     // 한글+괄호꺽쇠낫표
 //     innerText = innerText.replace(/([가-힣](?=[\)\‹\›\«\»\」\』]))/g, (match) => {
-//       return `<span class="한글괄호꺽쇠낫표">${match}</span>`;
+//       return `<span class="한글-괄호꺽쇠낫표">${match}</span>`;
 //     });
 
 //     // 숫자
@@ -205,7 +205,7 @@ function seokkiHangul_D() {
 
 //     // 마침표+따옴표
 //     innerText = innerText.replace(/([.](?=[’”]))/g, (match) => {
-//       return `<span class="마침표따옴표">${match}</span>`;
+//       return `<span class="마침표-따옴표">${match}</span>`;
 //     });
 
 //     // 쉼표
@@ -223,9 +223,9 @@ function seokkiHangul_D() {
 //       return `<span class="말줄임표">${match}</span>`;
 //     });
 
-//     // 대시
+//     // dash
 //     innerText = innerText.replace(/([\-\—])/g, (match) => {
-//       return `<span class="대시">${match}</span>`;
+//       return `<span class="dash">${match}</span>`;
 //     });
 
 //     // 꺽쇠
@@ -233,9 +233,9 @@ function seokkiHangul_D() {
 //       return `<span class="꺽쇠">${match}</span>`;
 //     });
 
-//     // 꺽쇠괄호
+//     // 꺽쇠-괄호
 //     innerText = innerText.replace(/([\›\»](?=[\(]))/g, (match) => {
-//       return `<span class="꺽쇠괄호">${match}</span>`;
+//       return `<span class="꺽쇠-괄호">${match}</span>`;
 //     });
 
 //     // 낫표
@@ -243,9 +243,9 @@ function seokkiHangul_D() {
 //       return `<span class="낫표">${match}</span>`;
 //     });
 
-//     // 낫표괄호
+//     // 낫표-괄호
 //     innerText = innerText.replace(/([\「\」\『\』](?=[\(]))/g, (match) => {
-//       return `<span class="낫표괄호">${match}</span>`;
+//       return `<span class="낫표-괄호">${match}</span>`;
 //     });
 
 //     // 콜론
@@ -280,7 +280,7 @@ function seokkiHangul_D() {
 
 //     // 한글+괄호꺽쇠낫표
 //     innerText = innerText.replace(/([가-힣](?=[\)\›\»\」\』]))/g, (match) => {
-//       return `<span class="한글괄호꺽쇠낫표">${match}</span>`;
+//       return `<span class="한글-괄호꺽쇠낫표">${match}</span>`;
 //     });
 
 //     // 숫자
@@ -295,7 +295,7 @@ function seokkiHangul_D() {
 
 //     // 마침표+따옴표
 //     innerText = innerText.replace(/([.](?=[’”]))/g, (match) => {
-//       return `<span class="마침표따옴표">${match}</span>`;
+//       return `<span class="마침표-따옴표">${match}</span>`;
 //     });
 
 //     // 쉼표
@@ -313,9 +313,9 @@ function seokkiHangul_D() {
 //       return `<span class="말줄임표">${match}</span>`;
 //     });
 
-//     // 대시
+//     // dash
 //     innerText = innerText.replace(/([\-\—])/g, (match) => {
-//       return `<span class="대시">${match}</span>`;
+//       return `<span class="dash">${match}</span>`;
 //     });
 
 //     // 꺽쇠
@@ -323,9 +323,9 @@ function seokkiHangul_D() {
 //       return `<span class="꺽쇠">${match}</span>`;
 //     });
 
-//     // 꺽쇠+괄호
+//     // 꺽쇠-괄호
 //     innerText = innerText.replace(/([\›\»](?=[\(]))/g, (match) => {
-//       return `<span class="꺽쇠괄호">${match}</span>`;
+//       return `<span class="꺽쇠-괄호">${match}</span>`;
 //     });
 
 //     // 괄호

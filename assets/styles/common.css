@@ -112,19 +112,19 @@ button {
   color: #FF5729;
 }
 .colored .romanParenthesis,
-.colored .마침표따옴표 {
+.colored .마침표-따옴표 {
   color: #D90000;
 }
 .colored .한글 {
   color: #006923;
 }
-.colored .한글괄호꺽쇠낫표 {
+.colored .한글-괄호꺽쇠낫표 {
   color: #00BF40;
 }
 .colored .숫자 {
   color: #008DE7;
 }
-.colored .대시,
+.colored .dash,
 .colored .콜론 {
   color: #F5B400;
 }
@@ -133,8 +133,8 @@ button {
 .colored .말줄임표 {
   color: #FFB8E8;
 }
-.colored .꺽쇠괄호,
-.colored .낫표괄호 {
+.colored .꺽쇠-괄호,
+.colored .낫표-괄호 {
   color: #F565DF;
 }
 .colored .괄호 {
@@ -163,7 +163,7 @@ button {
   letter-spacing: 0.03em;
   bottom: 0.045em;
 }
-.A .한글괄호꺽쇠낫표 {
+.A .한글-괄호꺽쇠낫표 {
   font-weight: 500;
   font-size: 94%;
   letter-spacing: -0.005em;
@@ -178,16 +178,16 @@ button {
 .A .말줄임표 {
   bottom: 0.28em;
 }
-.A .대시 {
+.A .dash {
   bottom: 0.05em;
 }
 .A .꺽쇠 {
   bottom: 0.09em;
 }
-.A .마침표따옴표 {
+.A .마침표-따옴표 {
   letter-spacing: -0.08em;
 }
-.A .낫표괄호 {
+.A .낫표-괄호 {
   letter-spacing: -0.06em;
 }
 
@@ -212,12 +212,12 @@ button {
   font-size: 96%;
 }
 .B .한글,
-.B .한글괄호꺽쇠낫표 {
+.B .한글-괄호꺽쇠낫표 {
   font-size: 90%;
   letter-spacing: 0.0015em;
   bottom: 0.03em;
 }
-.B .한글괄호꺽쇠낫표 {
+.B .한글-괄호꺽쇠낫표 {
   letter-spacing: -0.0015em;
 }
 .B .숫자 {
@@ -227,7 +227,7 @@ button {
 .B .마침표 {
   margin-left: -0.04em;
 }
-.B .마침표따옴표 {
+.B .마침표-따옴표 {
   margin-left: -0.04em;
   margin-right: -0.2em;
 }
@@ -242,16 +242,16 @@ button {
 .B .말줄임표 {
   bottom: 0.31em;
 }
-.B .대시,
+.B .dash,
 .B .꺽쇠,
-.B .꺽쇠괄호,
+.B .꺽쇠-괄호,
 .B .콜론 {
   bottom: 0.12em;
 }
-.B .꺽쇠괄호 {
+.B .꺽쇠-괄호 {
   letter-spacing: 0.02em;
 }
-.B .낫표괄호 {
+.B .낫표-괄호 {
   letter-spacing: -0.03em;
 }
 
@@ -290,7 +290,7 @@ button {
   letter-spacing: 0.015em;
   bottom: 0.035em;
 }
-.D .한글괄호꺽쇠낫표 {
+.D .한글-괄호꺽쇠낫표 {
   font-weight: 400;
   font-size: 88%;
   letter-spacing: 0em;
@@ -300,7 +300,7 @@ button {
   font-size: 108%;
   bottom: -0.03em;
 }
-.D .마침표따옴표 {
+.D .마침표-따옴표 {
   font-size: 108%;
   letter-spacing: -0.14em;
   bottom: -0.03em;
@@ -326,13 +326,13 @@ button {
   margin: 0 -0.03em;
   bottom: -0.015em;
 }
-.D .꺽쇠괄호 {
+.D .꺽쇠-괄호 {
   font-size: 130%;
   letter-spacing: 0.03em;
   margin: 0 -0.03em;
   bottom: -0.015em;
 }
-.D .대시 {
+.D .dash {
   bottom: 0.07em;
 }
 .D .콜론 {
